@@ -1,8 +1,10 @@
 const express = require('express')
 
-//importing data
-
+//import data
 const transactionsArray = require('../models/transactions')
+
+//import validations
+const {checkInput} = require('../validations/transactionsValidations')
 
 //instance of transactions
 const transactions = express.Router()
@@ -24,13 +26,13 @@ transactions.get('/:idx', (req,res) =>{
 })
 
 //POST Route
-transactions.post('/',(req,res) =>{
+transactions.post('/',checkInput,(req,res) =>{
     transactionsArray.push(req.body)
     res.json(transactionsArray[transactionsArray.length-1])
 })
 
 // PUT route
-transactions.put("/:idx", (req, res) => {
+transactions.put("/:idx",checkInput,(req, res) => {
     const { idx } = req.params
     transactionsArray[idx] = req.body
     res.status(200).json(transactionsArray[idx])
