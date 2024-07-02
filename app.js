@@ -7,9 +7,11 @@ const transactionsController = require("./controllers/transactionsController")
 //instance of the server
 const app = express()
 
-
+const cors = require('cors')
 
 //Middleware
+app.use(cors())
+
 app.use(express.json())
 
 // routes

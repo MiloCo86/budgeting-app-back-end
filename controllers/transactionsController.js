@@ -1,5 +1,8 @@
 const express = require('express')
 
+// to generate randomid
+const { nanoid } = require("nanoid");
+
 //import data
 const transactionsArray = require('../models/transactions')
 
@@ -27,22 +30,27 @@ transactions.get('/:idx', (req,res) =>{
 
 //POST Route
 transactions.post('/',checkInput,(req,res) =>{
-    transactionsArray.push(req.body)
+    const newTransaction = req.body
+    newTransaction.id = nanoid(5)
+    transactionsArray.push(newTransaction)
     res.json(transactionsArray[transactionsArray.length-1])
 })
 
 // PUT route
 transactions.put("/:idx",checkInput,(req, res) => {
     const { idx } = req.params
-    transactionsArray[idx] = req.body
+    const id = transactionsArray[idx].id
+    const updatedTransaction = req.body
+    updatedTransaction.id= id
+    transactionsArray[idx] = updatedTransaction
     res.status(200).json(transactionsArray[idx])
 })
 
 transactions.delete('/:idx', (req,res)=>{
     const { idx } = req.params;
     if(transactionsArray[idx]){
-        const deletedBookmark = transactionsArray.splice(idx,1)
-        res.json(transactionsArray[0])
+        const deletedTransaction = transactionsArray.splice(idx,1)
+        res.json(deletedTransaction)
     }else{
         res.status(404).json({error: "Transaction Not Found"})
     }
