@@ -1,72 +1,72 @@
 module.exports = [
     {
-      date: "9/19/2023",
-      description: "Corn - On The Cob",
-      type: "Jewelry",
-      amount: 309,
+      date: "2023-02-12",
+      description: "MasterCard *2323 Bill",
+      type: "Banking",
+      amount: 320,
       id: '00001'
     },
     {
-      date: "6/24/2024",
-      description: "Tomato - Green",
-      type: "Computers",
-      amount: 125,
+      date: "2024-02-22",
+      description: "Tomatos and Carrots",
+      type: "Groceries",
+      amount: 60,
       id: '00002'
     },
     {
-      date: "9/26/2023",
+      date: "2022-12-10",
       description: "Bread - Malt",
-      type: "Electronics",
-      amount: 330,
+      type: "Groceries",
+      amount: 120,
       id: '00003'
     },
     {
-      date: "4/12/2024",
-      description: "French Pastry - Mini Chocolate",
-      type: "Music",
-      amount: 171,
+      date: "2023-01-21",
+      description: "Funko Pop - Tanjiro",
+      type: "Personal",
+      amount: 22,
       id: '00004'
     },
     {
-      date: "7/7/2023",
-      description: "Calypso - Strawberry Lemonade",
-      type: "Baby",
+      date: "2021-02-07",
+      description: "Rent February 21",
+      type: "Rent",
       amount: 374,
       id: '01005'
     },
     {
-      date: "6/17/2024",
+      date: "2023-09-30",
       description: "Beans - Fava, Canned",
-      type: "Computers",
+      type: "Groceries",
       amount: 223,
       id: '01012'
     },
     {
-      date: "8/7/2023",
+      date: "2024-10-1",
       description: "Beer - Blue Light",
-      type: "Home",
+      type: "Groceries",
       amount: 68,
       id: '00012'
     },
     {
-      date: "6/11/2024",
+      date: "2022-02-22",
       description: "Spice - Peppercorn Melange",
-      type: "Music",
+      type: "Groceries",
       amount: 261,
       id: '00123'
     },
     {
-      date: "3/9/2024",
-      description: "Oil - Sunflower",
-      type: "Movies",
+      date: "2023-12-12",
+      description: "Car Oil replacement",
+      type: "Other",
       amount: 174,
       id: '00034'
     },
     {
-      date: "10/15/2023",
-      description: "Leeks - Baby, White",
-      type: "Music",
-      amount: 262,
+      date: "2024-06-16",
+      description: "Ipods gen3",
+      type: "Personal",
+      amount: 450,
       id: '00024'
     }
   ]

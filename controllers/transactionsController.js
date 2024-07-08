@@ -37,7 +37,7 @@ transactions.post('/',checkInput,(req,res) =>{
 })
 
 // PUT route
-transactions.put("/:idx",checkInput,(req, res) => {
+transactions.put("/:idx",(req, res) => {
     const { idx } = req.params
     const id = transactionsArray[idx].id
     const updatedTransaction = req.body
